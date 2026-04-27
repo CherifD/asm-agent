@@ -122,3 +122,7 @@ asm-agent "what is a syscall?"
 ## LinkedIn Summary
 
 I built a macOS Apple Silicon CLI in assembly that connects to an AI helper. The assembly binary handles terminal UX and process launching, while standard Unix tools like `curl` and `jq` handle the API request and JSON response. It was a learning project focused on low-level systems programming, native CLI design, and practical AI integration.
+
+## License
+
+This project is open source and available under the MIT License.
