@@ -1,0 +1,4 @@
+/bin/asm-agent
+/build/
+node_modules/
+.env

@@ -1,0 +1,28 @@
+{
+  "name": "asm-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An Apple Silicon assembly CLI that talks to an AI helper.",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "bin": {
+    "asm-agent": "./bin/asm-agent"
+  },
+  "scripts": {
+    "build": "sh scripts/build.sh",
+    "dev": "npm run build --silent && ./bin/asm-agent",
+    "check": "npm run build --silent && ./bin/asm-agent --help >/dev/null && ASM_AGENT_STATE=/tmp/asm-agent-check-memory.txt ASM_AGENT_MOCK_RESPONSE='offline helper ok' ./bin/asm-agent test && ASM_AGENT_STATE=/tmp/asm-agent-check-memory.txt ./bin/asm-agent history >/dev/null",
+    "prepare": "npm run build --silent"
+  },
+  "files": [
+    "asm",
+    "helper",
+    "scripts",
+    "bin/asm-agent",
+    "README.md"
+  ]
+}
